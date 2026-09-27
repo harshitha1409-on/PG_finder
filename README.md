@@ -62,7 +62,7 @@ This project was created to demonstrate practical knowledge of **frontend develo
 - XAMPP
 - Apache
 - MySQL
-- VS Code / any code editor
+- VS Code 
 
 ---
 
