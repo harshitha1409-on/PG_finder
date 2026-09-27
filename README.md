@@ -1,5 +1,10 @@
 # VizagPG Finder
 
+## 🌐 Live Demo
+
+**Live Website:** https://pgfinder.rf.gd/
+
+**GitHub Repository:** https://github.com/harshitha1409-on/PG_finder
 ## 📌 Project Overview
 
 **VizagPG Finder** is a student accommodation website developed as an internship-level web development project.
