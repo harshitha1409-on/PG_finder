@@ -1,0 +1,6 @@
+let session={logged_in:false,interests:[]};
+async function loadSession(){try{const r=await fetch('api/session.php');session=await r.json();window.session=session;const g=document.getElementById('userGreeting');const t=document.getElementById('authNavText');if(g)g.textContent=session.logged_in?`Hi, ${session.name}`:'';if(t)t.textContent=session.logged_in?'Logout':'Login';const btn=document.querySelector('[data-bs-target="#authModal"]');if(btn)btn.onclick=()=>session.logged_in?logoutUser():bootstrap.Modal.getOrCreateInstance(document.getElementById('authModal')).show();}catch(e){}}
+async function logoutUser(){const fd=new FormData();fd.append('action','logout');await fetch('api/auth.php',{method:'POST',body:fd});location.reload();}
+function goSearch(city){city=(city||'').trim();if(!city){window.location.href='listings.php?city=Visakhapatnam';return;}const aliases={vizag:'Visakhapatnam',visakhapatnam:'Visakhapatnam',bengaluru:'Bengaluru'};city=aliases[city.toLowerCase()]||city;window.location.href='listings.php?city='+encodeURIComponent(city);}
+document.getElementById('homeSearch').addEventListener('submit',e=>{e.preventDefault();goSearch(document.getElementById('homeCity').value);});
+loadSession();

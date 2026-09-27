@@ -1,0 +1,20 @@
+PROJECT: VIZAGPG FINDER
+
+Purpose:
+A responsive student accommodation website for exploring PG properties in Visakhapatnam.
+
+Technology:
+HTML, CSS, Bootstrap, JavaScript, PHP, MySQL, AJAX and React.
+
+Main features:
+1. Responsive property listing.
+2. City, budget and gender filtering without page refresh.
+3. Property details with image gallery, amenities, description and rating.
+4. User signup and login.
+5. AJAX interest/shortlist toggle.
+6. MySQL database with users, properties, amenities, property_amenities and interested_users, plus property_images for the gallery.
+7. React component integration.
+8. Ready for PHP/MySQL hosting.
+
+Approach:
+The frontend sends AJAX requests to PHP API files. PHP reads/writes MySQL data using prepared statements. React is loaded through CDN for a small component, while Bootstrap provides responsive layout. The same code can be run locally with XAMPP and deployed to a PHP/MySQL hosting platform.
